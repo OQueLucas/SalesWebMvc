@@ -20,12 +20,23 @@ O projeto na aula utiliza o Dotnet Core 2.1, porém estou utilizando o Dotnet 6 
 - ``Migration``
 
 ## 👨🏽‍💻 Comandos úteis
-```Add-Migration 'name'```
-```Update-Database```
+- ```Add-Migration 'name'```
+- ```Update-Database```
 
 ## :floppy_disk: Clonar Repositório
 
-```git clone git@github.com:OQueLucas/SalesWebMvc.git```
+```bash
+git clone git@github.com:OQueLucas/SalesWebMvc.git
+```
+
+## 🦾 Iniciar Projeto
+
+Acesse o appsettings.json e altere os valores para adequar a database;
+
+Abra o Package Manager Console e digite o comando abaixo para criar a database;
+```bash 
+Update-Database
+```
 
 ## 👨🏻‍🦱 Author
 [Lucas Queiroz](https://github.com/OQueLucas/)
