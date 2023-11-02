@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using SalesWebMvc.Data;
 using SalesWebMvc.Models;
+using SalesWebMvc.Services;
+
 namespace SalesWebMvc
 {
     public class Program
@@ -13,6 +15,8 @@ namespace SalesWebMvc
                 options.UseMySql(builder.Configuration.GetConnectionString("SalesWebMvcContext"),
                 new MySqlServerVersion(new Version(8, 0)))
             );
+
+            builder.Services.AddScoped<SellerService>();
           
             // Add services to the container.
             builder.Services.AddControllersWithViews();
