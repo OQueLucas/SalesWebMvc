@@ -19,9 +19,13 @@ O projeto na aula utiliza o Dotnet Core 2.1, porém estou utilizando o Dotnet 6 
 - ``MySQL``
 - ``Migration``
 
+## 👨🏽‍💻 Comandos úteis
+```Add-Migration 'name'```
+```Update-Database```
+
 ## :floppy_disk: Clonar Repositório
 
 ```git clone git@github.com:OQueLucas/SalesWebMvc.git```
 
-## Author
-:boy: [Lucas Queiroz](https://github.com/OQueLucas/)
+## 👨🏻‍🦱 Author
+[Lucas Queiroz](https://github.com/OQueLucas/)
