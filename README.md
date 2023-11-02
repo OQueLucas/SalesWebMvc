@@ -11,7 +11,7 @@ Ao fim do projeto, espero ter aprimorado meu conhecimento e desejo aplicar algum
 
 O projeto na aula utiliza o Dotnet Core 2.1, porém estou utilizando o Dotnet 6 e posteriormente, desejo migrar para o 7, principalmente por fim academico e por ser a ultima versão.
 
-## :heavy_check_mark: Recursos Utilizados
+## :wrench: Recursos Utilizados
 
 - ``.NET 6``
 - ``C#``
