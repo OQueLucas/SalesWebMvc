@@ -16,6 +16,7 @@ O projeto na aula utiliza o Dotnet Core 2.1, porém estou utilizando o Dotnet 6 
 - ``.NET 6``
 - ``C#``
 - ``MVC``
+- ``Entity Framework``
 - ``MySQL``
 - ``Migration``
 
