@@ -1,5 +1,7 @@
 ﻿using SalesWebMvc.Models;
 using Microsoft.EntityFrameworkCore;
+using SalesWebMvc.Services.Exceptions;
+using MySqlConnector;
 
 namespace SalesWebMvc.Services
 {
@@ -15,6 +17,24 @@ namespace SalesWebMvc.Services
         public async Task<List<Department>> FindAllAsync()
         {
             return await _context.Department.OrderBy(x => x.Name).ToListAsync();
+        }
+
+        public async Task RemoveAsync(int id)
+        {
+            try
+            {
+                var department = await _context.Department.FindAsync(id);
+                if (department != null)
+                {
+                    _context.Department.Remove(department);
+                await _context.SaveChangesAsync();
+                }
+
+            }
+            catch (IntegrityException e)
+            {
+                throw new IntegrityException("Can't delete department because he/she has sellers.");
+            }
         }
     }
 }

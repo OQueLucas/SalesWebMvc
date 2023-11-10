@@ -1,29 +1,35 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
+using SalesWebMvc.Models.ViewModels;
+using SalesWebMvc.Services;
+using SalesWebMvc.Services.Exceptions;
 
 namespace SalesWebMvc.Controllers
 {
     public class DepartmentsController : Controller
     {
         private readonly SalesWebMvcContext _context;
+        private readonly DepartmentService _departmentService;
 
-        public DepartmentsController(SalesWebMvcContext context)
+        public DepartmentsController(SalesWebMvcContext context, DepartmentService departmentService)
         {
             _context = context;
+            _departmentService = departmentService;
         }
 
         // GET: Departments
         public async Task<IActionResult> Index()
         {
-              return _context.Department != null ? 
-                          View(await _context.Department.ToListAsync()) :
-                          Problem("Entity set 'SalesWebMvcContext.Department'  is null.");
+            return _context.Department != null ?
+                        View(await _context.Department.ToListAsync()) :
+                        Problem("Entity set 'SalesWebMvcContext.Department'  is null.");
         }
 
         // GET: Departments/Details/5
@@ -140,23 +146,35 @@ namespace SalesWebMvc.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Department == null)
+            try
             {
-                return Problem("Entity set 'SalesWebMvcContext.Department'  is null.");
+                if (_context.Department == null)
+                {
+                    return Problem("Entity set 'SalesWebMvcContext.Department' is null.");
+                }
+                await _departmentService.RemoveAsync(id);
+                return RedirectToAction(nameof(Index));
             }
-            var department = await _context.Department.FindAsync(id);
-            if (department != null)
+            catch (IntegrityException e)
             {
-                _context.Department.Remove(department);
+                return RedirectToAction(nameof(Error), new { message = e.Message });
             }
-            
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));
         }
 
         private bool DepartmentExists(int id)
         {
-          return (_context.Department?.Any(e => e.Id == id)).GetValueOrDefault();
+            return (_context.Department?.Any(e => e.Id == id)).GetValueOrDefault();
+        }
+
+        public IActionResult Error(string message)
+        {
+            var viewModel = new ErrorViewModel
+            {
+                Message = message,
+                RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier
+            };
+
+            return View(viewModel);
         }
     }
 }
