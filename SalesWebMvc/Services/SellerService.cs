@@ -37,9 +37,9 @@ namespace SalesWebMvc.Services
                 _context.Seller.Remove(obj);
                 await _context.SaveChangesAsync();
             }
-            catch(IntegrityException e)
+            catch(IntegrityException)
             {
-                throw new IntegrityException("Can't delete seller because he/she has sales");
+                throw new IntegrityException("Can't delete the department because it has sellers.");
             }
         }
 

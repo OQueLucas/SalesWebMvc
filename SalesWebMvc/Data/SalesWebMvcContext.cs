@@ -20,6 +20,12 @@ namespace SalesWebMvc.Models
                 .HasOne(e => e.Seller)
                 .WithMany(e => e.Sales)
                 .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder
+                .Entity<Seller>()
+                .HasOne(e => e.Department)
+                .WithMany(e => e.Sellers)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }
