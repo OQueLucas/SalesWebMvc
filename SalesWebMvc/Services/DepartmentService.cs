@@ -31,9 +31,13 @@ namespace SalesWebMvc.Services
                 }
 
             }
-            catch (IntegrityException e)
+            catch (DbUpdateException)
             {
-                throw new IntegrityException("Can't delete department because he/she has sellers.");
+                throw new DbUpdateException("Can't delete department because he/she has sellers.");
+            }
+            catch (IntegrityException)
+            {
+                throw new IntegrityException("Can't delete seller because he/she has sales");
             }
         }
     }
