@@ -1,6 +1,5 @@
-# SalesWebMvc
+# SalesWebMvc ![Static Badge](https://img.shields.io/badge/6.0-blueviolet?logo=.net&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-000000.svg?logo=mysql&logoColor=white)
 
-## 🧮 Projeto
 
 Aplicação `C# MVC` criada para fins acadêmicos.
 
@@ -11,12 +10,11 @@ Aplicação `C# MVC` criada para fins acadêmicos.
 <img src="https://github.com/OQueLucas/SalesWebMvc/assets/36959868/2e9ad963-b25c-4de2-b392-2dbd531c8810" width="33%" />
 
 
-## ✍🏻 Decisões Técnicas
+Este projeto é o projeto final do curso `"C# COMPLETO Programação Orientada a Objetos + Projetos"` do `Prof. Nelio Alves`, e utiliza o .NET Core MVC e Entity Framework.
 
-Este projeto é o projeto final do curso `"C# COMPLETO Programação Orientada a Objetos + Projetos"` do `Prof. Nelio Alves`, e está sendo usado o modelo MVC.
-Ao fim do projeto, espero ter aprimorado meu conhecimento e desejo aplicar alguma memoria que achar interessante.
+Ao fim do projeto, espero ter aprimorado meu conhecimento e desejo aplicar alguma melhoria que achar interessante.
 
-O projeto na aula utiliza o Dotnet Core 2.1, porém estou utilizando o Dotnet 6 e posteriormente, desejo migrar para o Dotnet 7, principalmente por fim academico e por ser a ultima versão.
+O Prof. utiliza o Dotnet Core 2.1 na aula, porém estou utilizando o Dotnet 6 e posteriormente, desejo migrar para o Dotnet 7, principalmente por fim academico e por ser a ultima versão.
 
 ## 🔧 Recursos Utilizados
 
@@ -28,8 +26,14 @@ O projeto na aula utiliza o Dotnet Core 2.1, porém estou utilizando o Dotnet 6 
 - ``Migration``
 
 ## 👨🏽‍💻 Comandos úteis
-- ```Add-Migration 'name'```
-- ```Update-Database```
+
+```bash
+Add-Migration 'name'
+```
+
+```bash
+Update-Database
+```
 
 ## 🔻 Clonar Repositório
 
