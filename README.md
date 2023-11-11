@@ -1,4 +1,4 @@
-# SalesWebMvc ![Static Badge](https://img.shields.io/badge/6.0-blueviolet?logo=.net&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-000000.svg?logo=mysql&logoColor=white)
+# SalesWebMvc ![C#](https://img.shields.io/badge/c%23-%23239120.svg?logo=c-sharp&logoColor=white) ![Static Badge](https://img.shields.io/badge/6.0-blueviolet?logo=.net&logoColor=white) ![MySQL](https://img.shields.io/badge/mysql-000000.svg?logo=mysql&logoColor=white) ![Blazor](https://img.shields.io/badge/blazor-%235C2D91.svg?logo=blazor&logoColor=white) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?logo=bootstrap&logoColor=white)
 
 
 Aplicação `C# MVC` criada para fins acadêmicos.
