@@ -27,7 +27,7 @@ namespace SalesWebMvc.Services
                 if (department != null)
                 {
                     _context.Department.Remove(department);
-                await _context.SaveChangesAsync();
+                    await _context.SaveChangesAsync();
                 }
 
             }
@@ -37,7 +37,7 @@ namespace SalesWebMvc.Services
             }
             catch (IntegrityException)
             {
-                throw new IntegrityException("Can't delete seller because he/she has sales");
+                throw new IntegrityException("Can't delete department because he/she has sellers.");
             }
         }
     }
