@@ -6,6 +6,11 @@ Aplicação `C# MVC` criada para fins acadêmicos.
 
 ![Badge em Desenvolvimento](http://img.shields.io/static/v1?label=STATUS&message=EM%20DESENVOLVIMENTO&color=GREEN&style=for-the-badge)
 
+<img src="https://github.com/OQueLucas/SalesWebMvc/assets/36959868/1d2445fc-7622-439c-b7a8-dd9093491048" width="33%" />
+<img src="https://github.com/OQueLucas/SalesWebMvc/assets/36959868/3197c664-d661-4df8-a99d-f69b92b973e8" width="33%" />
+<img src="https://github.com/OQueLucas/SalesWebMvc/assets/36959868/2e9ad963-b25c-4de2-b392-2dbd531c8810" width="33%" />
+
+
 ## ✍🏻 Decisões Técnicas
 
 Este projeto é o projeto final do curso `"C# COMPLETO Programação Orientada a Objetos + Projetos"` do `Prof. Nelio Alves`, e está sendo usado o modelo MVC.
